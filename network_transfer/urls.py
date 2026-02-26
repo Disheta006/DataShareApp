@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import home
+from core.views import home, transfer
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('',home,name='home'),
+    path('transfer/',transfer,name='transfer'),
 ]

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-100 py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">New Transfer</h1>
+            <a href="{% url 'home' %}" class="text-sm text-black bg-white px-4 py-2 rounded-lg shadow hover:bg-gray-50 transition">
+                <i class="fa-solid fa-arrow-left-long"></i> Back to Home
+            </a>
+        </div>
+        <p class="text-gray-500 mb-8">Fill in the details below to complete your data transfer.</p>
+
+        <form method="post" class="space-y-6">
+            {% csrf_token %}
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-blue-600"><i class="fa-solid fa-circle text-blue-600 text-sm"></i> Sender Information</h2>
+                        <span class="text-xs text-black bg-gray-100 px-3 py-1 rounded-full">FROM</span>
+                    </div>
+                </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
