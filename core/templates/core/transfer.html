@@ -19,7 +19,72 @@
                         <h2 class="text-lg font-semibold text-blue-600"><i class="fa-solid fa-circle text-blue-600 text-sm"></i> Sender Information</h2>
                         <span class="text-xs text-black bg-gray-100 px-3 py-1 rounded-full">FROM</span>
                     </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm mb-1">Mobile Number *</label>
+                            <input type="text" name="sender_number" placeholder="+91 9876543210" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1">Display Name (Optional)</label>
+                            <input type="text" name="sender_name" placeholder="John Doe" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                        </div>
+                    </div>
                 </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-orange-600"><i class="fa-solid fa-circle text-orange-600 text-sm"></i> Receiver Information</h2>
+                        <span class="text-xs text-black bg-gray-100 px-3 py-1 rounded-full">TO</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm mb-1">Mobile Number *</label>
+                            <input type="text" name="receiver_number" placeholder="+91 9123456780" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-1">Display Name (Optional)</label>
+                            <input type="text" name="receiver_name" placeholder="Jane Smith" class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-orange-400 outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-orange-500"><i class="fa-solid fa-circle"></i> Data Amount</h2>
+                        <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">SELECT</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 mb-4">
+                        {% for amount in data_options %}
+                            <button type="button" class="border rounded-xl py-3 text-sm font-medium hover:bg-blue-100 transition">{{ amount }}</button>
+                        {% endfor %}
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <input type="number" name="customer_amount" placeholder="Enter custom amount" class="flex-1 border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                        <span class="text-gray-500">MB</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <h2><i class="fa-solid fa-circle"></i> Transfer Summary</h2>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <div class="flex justify-between">
+                            <span>From</span>
+                            <span>--</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>To</span>
+                            <span>--</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Amount</span>
+                            <span>--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 text-white hover:bg-blue-600 font-semibold py-3 rounded-xl transition duration-300">Execute Transfer</button>
+
         </form>
 
     </div>
