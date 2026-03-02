@@ -11,14 +11,14 @@
             <nav class="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
                 <a href="#features" class="hover:text-blue-600 transition">Features</a>
                 <a href="#process" class="hover:text-blue-600 transition">How it Works</a>
-                <a href="#" class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">Sign up <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="{% url 'signup' %}" class="bg-blue-600 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-700 transition">Sign up <i class="fa-solid fa-arrow-right-long"></i></a>
             </nav>
             <button id="menu_btn" class="md:hidden text-2xl text-black  "><i class="fa-solid fa-bars"></i></button>
         </div>
         <div id="mobile_menu" class="hidden md:hidden px-6 pb-4 space-y-3 bg-white">
             <a href="#features" class="block text-gray-600">Features</a>
             <a href="#process" class="block text-gray-600">How it Works</a>
-            <a href="#" class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">Sign up</a>
+            <a href="{% url 'signup' %}" class="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">Sign up</a>
         </div>
     </header>
 
@@ -35,7 +35,7 @@
             
                 <p class="mt-6 text-gray-600 text-lg">Send your unused mobile data to friends and family in seconds. Simple, secure, and works with all carries.</p>
                 <div class="mt-8 flex gap-4">
-                    <a href="{% url 'transfer' %}" class="bg-blue-500 border border-gray-300 px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-700 transition transform">Get Started <i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{% url 'transfer' %}" class="bg-blue-500 border border-gray-300 px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-700 transition transform text-white">Get Started <i class="fa-solid fa-arrow-right-long"></i></a>
                     <a href="#process" class="bg-gray-100 text-gray-800 border border-gray-300 px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-200 transition">Learn More</a>
                 </div>
                 <div class="mt-12 grid grid-cols-3 gap-6">

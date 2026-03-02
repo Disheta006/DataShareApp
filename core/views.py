@@ -10,3 +10,6 @@ def transfer(request):
         'data_options': data_options
     }
     return render(request,'core/transfer.html', context)
+
+def signup(request):
+    return render(request,'core/signup.html')
