@@ -13,3 +13,6 @@ def transfer(request):
 
 def signup(request):
     return render(request,'core/signup.html')
+
+def login(request):
+    return render(request,'core/login.html')
