@@ -22,3 +22,6 @@ def forget_password(request):
 
 def verify_code(request):
     return render(request,'core/verify_code.html')
+
+def reset_password(request):
+    return render(request,'core/reset_password.html')
