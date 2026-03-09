@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import home, transfer, signup, login, forget_password, verify_code, reset_password
+from core.views import home, transfer, signup, login, forget_password, verify_code, reset_password, support
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -27,4 +27,5 @@ urlpatterns = [
     path('forget_password/',forget_password,name='forget_password'),
     path('verify_code',verify_code,name='verify_code'),
     path('reset_password',reset_password,name='reset_password'),
+    path('support',support,name='support'),
 ]

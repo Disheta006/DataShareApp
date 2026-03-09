@@ -25,3 +25,6 @@ def verify_code(request):
 
 def reset_password(request):
     return render(request,'core/reset_password.html')
+
+def support(request):
+    return render(request,'core/support.html')
