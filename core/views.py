@@ -5,7 +5,7 @@ def home(request):
     return render(request,'core/home.html')
 
 def transfer(request):
-    data_options = ["100MB", "250MB", "500MB", "1GB", "2GB", "5GB"]
+    data_options = ["50MB", "100MB", "150MB", "200MB", "500MB", "1GB"]
     context = {
         'data_options': data_options
     }

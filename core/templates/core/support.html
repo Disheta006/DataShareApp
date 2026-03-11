@@ -96,9 +96,42 @@
             </div>
         </div>
     </section>
+
+    <section class="py-16 border-t">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-2">Share Your Feedback</h2>
+            <p class="text-center text-gray-500 mb-10">Tell us about your experience with DataShare support</p>
+            <form class="bg-gray-50 p-8 rounded-xl shadow">
+                <div class="mb-5">
+                    <label class="block mb-2 font-medium">Your Name</label>
+                    <input type="text" placeholder="Enter your name" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 font-medium">Email</label>
+                    <input type="email" placeholder="Enter your email" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label class="block mb-3 font-medium">Rate our Support</label>
+                    <div class="flex gap-2 text-3xl cursor-pointer" id="rating">
+                        <span class="star" data-value="1">⭐</span>
+                        <span class="star" data-value="2">⭐</span>
+                        <span class="star" data-value="3">⭐</span>
+                        <span class="star" data-value="4">⭐</span>
+                        <span class="star" data-value="5">⭐</span>
+                    </div>
+                    <input type="hidden" name="rating" id="ratingValue">
+                </div>
+                <div class="mb-5">
+                    <label class="block mb-2 font-medium">Your Feedback</label>
+                    <textarea rows="4" placeholder="Tell us how we can improve...." class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
 </div>
 
-
+<!--Question toggle btn-->
 <script>
     const buttons = document.querySelectorAll('.faq_btn');
     buttons.forEach(button => {
@@ -110,4 +143,20 @@
         });
     });
 </script>
+
+<!-- Ratings -->
+ <script>
+    const stars = document.querySelectorAll('.star');
+    const ratingValue = document.getElementById('ratingValue');
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            let rating = star.getAttribute('data-value');
+            ratingValue.value = rating; 
+            stars.forEach(s => s.style.opacity = '0.3');
+            for (let i=0; i<rating; i++) {
+                stars[i].style.opacity = '1';
+            }
+        });
+    });
+ </script>
 {% endblock %}
